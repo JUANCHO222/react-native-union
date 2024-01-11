@@ -20,21 +20,6 @@ const changeUIcon=()=><AntDesign name="addusergroup" size={24}></AntDesign>
 const SupportIcon=()=><MaterialIcons name="support-agent" size={24}></MaterialIcons>
 const LogoutIcon=()=><MaterialIcons name="logout" size={24}></MaterialIcons>
 
-function cambiarUsuario() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Cambiar de usuario!</Text>
-    </View>
-  );
-}
-function soportePantalla() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
-    </View>
-  );
-}
-
 const Drawer = createDrawerNavigator();
 
 export default function App() {
@@ -75,10 +60,6 @@ export default function App() {
         <Drawer.Screen name="buscarPacienteS" component={buscarPaciente} options={({ route }) => ({drawerLabel: () => null,drawerItemStyle: { display: 'none' },})} />
         <Drawer.Screen name="perfilPacienteS" component={perfilPaciente} options={({ route }) => ({drawerLabel: () => null,drawerItemStyle: { display: 'none' },})} />
               
-        {/* Prueba */}
-        <Drawer.Screen name="Cambiar de usuario" component={cambiarUsuario} options={{drawerIcon:changeUIcon}}/>
-        <Drawer.Screen name="Soporte Técnico" component={soportePantalla} options={{drawerIcon:SupportIcon}}/>
-        <Drawer.Screen name="Cerrar cesion" component={soportePantalla} options={{drawerIcon:LogoutIcon}}/>
       </Drawer.Navigator>
     </NavigationContainer>
 
